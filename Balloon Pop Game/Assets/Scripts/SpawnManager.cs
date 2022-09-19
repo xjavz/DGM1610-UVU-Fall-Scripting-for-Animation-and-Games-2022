@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     // Global Variables
-    public gameObject[] balloonPrefabs;
+    public GameObject[] balloonPrefabs;
     public float startDelay = 0.5f;
     public float spawnInterval = 1.5f;
 
@@ -16,14 +16,6 @@ public class SpawnManager : MonoBehaviour
     {
         InvokeRepeating("SpawnRandomBalloon", startDelay, spawnInterval);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     void SpawnRandomBalloon()
     {
         // Get a random position on the x-axis
