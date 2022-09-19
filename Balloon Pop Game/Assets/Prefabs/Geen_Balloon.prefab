@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4252889356236417678}
   - component: {fileID: 4252889356236297585}
   - component: {fileID: 4252889356236417677}
+  - component: {fileID: 1097993501237208870}
   m_Layer: 0
   m_Name: Geen_Balloon
   m_TagString: Untagged
@@ -211,6 +212,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 5
   scaleToIncrease: 0.2
+--- !u!114 &1097993501237208870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252889356236297584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19f22641a998af4faffff153b63220c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4252889356272630167
 GameObject:
   m_ObjectHideFlags: 0
