@@ -20,7 +20,7 @@ public class MagicBlast : MonoBehaviour
     // Detect any collision and triggers
     void OnTriggerEnter2D(Collider2D other)
     {
-        GhostEnemy enemy = other.GetComponent<GhostEnemy>();
+        Enemy enemy = other.GetComponent<Enemy>();
        
         if(other.gameObject.CompareTag("Enemy"))
         {
