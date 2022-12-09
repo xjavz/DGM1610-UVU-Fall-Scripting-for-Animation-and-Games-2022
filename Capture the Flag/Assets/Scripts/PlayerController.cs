@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         //weapon = GetComponent<Weapon>();
+        curHp = maxHp;
     }
     // Start is called before the first frame update
     void Start()
