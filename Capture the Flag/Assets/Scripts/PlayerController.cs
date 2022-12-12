@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         //GameManager.instance.LoseGame();
         Debug.Log("Player has died! Game Over !");
+        Time.timeScale = 0;
     }
      public void GiveHealth(int amountToGive)
     {
@@ -67,6 +68,11 @@ public class PlayerController : MonoBehaviour
         //weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
         //GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
         Debug.Log("Player has collected ammo!");
+    }
+
+    public void GivepowerUp(int amountToGive)
+    {
+        Debug.Log("Player has collected powerUp!");
     }
     
     void PlayerMove()

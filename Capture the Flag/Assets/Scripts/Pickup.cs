@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
    public PickupType type;
    public int healthAmount;
    public int ammoAmount;
+   public int powerUpAmount;
 
    [Header("Bobbing Motion")]
    public float rotationSpeed;
@@ -26,7 +27,8 @@ public class Pickup : MonoBehaviour
     public enum PickupType
     {
         Health,
-        Ammo
+        Ammo, 
+        powerUp
     }
 
     
@@ -46,8 +48,8 @@ public class Pickup : MonoBehaviour
             player.GiveAmmo(ammoAmount);
             break;
 
-            default:
-            print("Type not accepted");
+            case PickupType.powerUp:
+            player.GivepowerUp(powerUpAmount);
             break;
           }
           //Refernce Audio Source to play sound effect

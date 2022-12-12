@@ -14,8 +14,11 @@ public class Enemy : MonoBehaviour
     
     
     
+    
     // Target to follow
     private GameObject target;
+
+    private PlayerController player;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,8 @@ public class Enemy : MonoBehaviour
         //Get the components
         //weapon = GetComponent<Weapon>();
         target = FindObjectOfType<PlayerController>().gameObject;
+
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         InvokeRepeating("UpdatePath", 0.0f, 0.5f);
 
@@ -74,9 +79,12 @@ public class Enemy : MonoBehaviour
 
         // Calculate the distance between the enemy and the player
         float dist = Vector3.Distance(transform.position, target.transform.position);
+        
         // If within attackrange shoot at player
         if(dist <= attackRange)
         {
+            player.TakeDamage(1);
+
             /*if(weapon.CanShoot())
                 weapon.Shoot();*/
         }
